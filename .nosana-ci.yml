@@ -1,0 +1,16 @@
+
+global:
+  network: solana-devnet
+
+triggers:
+  - branch: main
+    jobs:
+      - 'Nosana Build & Deploy'
+
+jobs:
+  'Nosana Build & Deploy':
+    image: node:18-alpine
+    commands:
+      - 'npm install'
+      - 'npm run build'
+      - 'echo "Deployment step would go here"'
